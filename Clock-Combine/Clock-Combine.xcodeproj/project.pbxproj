@@ -20,6 +20,9 @@
 		CEB27CC52B0DF3220074CCAF /* YSStopwatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27CC42B0DF3220074CCAF /* YSStopwatchVC.swift */; };
 		CEB27CC72B0DF3310074CCAF /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27CC62B0DF3310074CCAF /* AlarmVC.swift */; };
 		CEB27CC92B0DF34C0074CCAF /* WorldClockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27CC82B0DF34C0074CCAF /* WorldClockVC.swift */; };
+		CEB27CCC2B0DF93E0074CCAF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEB27CCB2B0DF93E0074CCAF /* SnapKit */; };
+		CEB27CCF2B0DF95C0074CCAF /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27CCE2B0DF95C0074CCAF /* UIView+.swift */; };
+		CEB27CD22B0DF9F20074CCAF /* Publisher+UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27CD12B0DF9F20074CCAF /* Publisher+UIControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,8 @@
 		CEB27CC42B0DF3220074CCAF /* YSStopwatchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSStopwatchVC.swift; sourceTree = "<group>"; };
 		CEB27CC62B0DF3310074CCAF /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
 		CEB27CC82B0DF34C0074CCAF /* WorldClockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockVC.swift; sourceTree = "<group>"; };
+		CEB27CCE2B0DF95C0074CCAF /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		CEB27CD12B0DF9F20074CCAF /* Publisher+UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+UIControl.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB27CCC2B0DF93E0074CCAF /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +113,7 @@
 		CEB27C872B0DF0CC0074CCAF /* Clock-Combine */ = {
 			isa = PBXGroup;
 			children = (
+				CEB27CCD2B0DF9480074CCAF /* Utils */,
 				CEB27CB92B0DF1FB0074CCAF /* Features */,
 				CEB27CB82B0DF1DD0074CCAF /* Supports */,
 				CEB27C912B0DF0CD0074CCAF /* Assets.xcassets */,
@@ -195,6 +202,23 @@
 			path = Timer;
 			sourceTree = "<group>";
 		};
+		CEB27CCD2B0DF9480074CCAF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CEB27CD02B0DF9D80074CCAF /* Combine+ */,
+				CEB27CCE2B0DF95C0074CCAF /* UIView+.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CEB27CD02B0DF9D80074CCAF /* Combine+ */ = {
+			isa = PBXGroup;
+			children = (
+				CEB27CD12B0DF9F20074CCAF /* Publisher+UIControl.swift */,
+			);
+			path = "Combine+";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,6 +235,9 @@
 			dependencies = (
 			);
 			name = "Clock-Combine";
+			packageProductDependencies = (
+				CEB27CCB2B0DF93E0074CCAF /* SnapKit */,
+			);
 			productName = "Clock-Combine";
 			productReference = CEB27C852B0DF0CC0074CCAF /* Clock-Combine.app */;
 			productType = "com.apple.product-type.application";
@@ -283,6 +310,9 @@
 				Base,
 			);
 			mainGroup = CEB27C7C2B0DF0CC0074CCAF;
+			packageReferences = (
+				CEB27CCA2B0DF93E0074CCAF /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = CEB27C862B0DF0CC0074CCAF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -329,8 +359,10 @@
 				CEB27CC12B0DF2D90074CCAF /* TimerVC.swift in Sources */,
 				CEB27CC92B0DF34C0074CCAF /* WorldClockVC.swift in Sources */,
 				CEB27C8D2B0DF0CC0074CCAF /* TabBarController.swift in Sources */,
+				CEB27CD22B0DF9F20074CCAF /* Publisher+UIControl.swift in Sources */,
 				CEB27CC52B0DF3220074CCAF /* YSStopwatchVC.swift in Sources */,
 				CEB27C892B0DF0CC0074CCAF /* AppDelegate.swift in Sources */,
+				CEB27CCF2B0DF95C0074CCAF /* UIView+.swift in Sources */,
 				CEB27CC32B0DF3060074CCAF /* JHStopwatchVC.swift in Sources */,
 				CEB27C8B2B0DF0CC0074CCAF /* SceneDelegate.swift in Sources */,
 			);
@@ -658,6 +690,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEB27CCA2B0DF93E0074CCAF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEB27CCB2B0DF93E0074CCAF /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB27CCA2B0DF93E0074CCAF /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEB27C7D2B0DF0CC0074CCAF /* Project object */;
 }
