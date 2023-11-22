@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		CEB27C892B0DF0CC0074CCAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27C882B0DF0CC0074CCAF /* AppDelegate.swift */; };
 		CEB27C8B2B0DF0CC0074CCAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27C8A2B0DF0CC0074CCAF /* SceneDelegate.swift */; };
-		CEB27C8D2B0DF0CC0074CCAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27C8C2B0DF0CC0074CCAF /* ViewController.swift */; };
+		CEB27C8D2B0DF0CC0074CCAF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27C8C2B0DF0CC0074CCAF /* TabBarController.swift */; };
 		CEB27C922B0DF0CD0074CCAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB27C912B0DF0CD0074CCAF /* Assets.xcassets */; };
 		CEB27C952B0DF0CD0074CCAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB27C932B0DF0CD0074CCAF /* LaunchScreen.storyboard */; };
 		CEB27CA02B0DF0CD0074CCAF /* Clock_CombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27C9F2B0DF0CD0074CCAF /* Clock_CombineTests.swift */; };
 		CEB27CAA2B0DF0CE0074CCAF /* Clock_CombineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27CA92B0DF0CE0074CCAF /* Clock_CombineUITests.swift */; };
 		CEB27CAC2B0DF0CE0074CCAF /* Clock_CombineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27CAB2B0DF0CE0074CCAF /* Clock_CombineUITestsLaunchTests.swift */; };
+		CEB27CC12B0DF2D90074CCAF /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27CC02B0DF2D90074CCAF /* TimerVC.swift */; };
+		CEB27CC32B0DF3060074CCAF /* JHStopwatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27CC22B0DF3060074CCAF /* JHStopwatchVC.swift */; };
+		CEB27CC52B0DF3220074CCAF /* YSStopwatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27CC42B0DF3220074CCAF /* YSStopwatchVC.swift */; };
+		CEB27CC72B0DF3310074CCAF /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27CC62B0DF3310074CCAF /* AlarmVC.swift */; };
+		CEB27CC92B0DF34C0074CCAF /* WorldClockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27CC82B0DF34C0074CCAF /* WorldClockVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,7 @@
 		CEB27C852B0DF0CC0074CCAF /* Clock-Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clock-Combine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB27C882B0DF0CC0074CCAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB27C8A2B0DF0CC0074CCAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEB27C8C2B0DF0CC0074CCAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEB27C8C2B0DF0CC0074CCAF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CEB27C912B0DF0CD0074CCAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEB27C942B0DF0CD0074CCAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEB27C962B0DF0CD0074CCAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +52,11 @@
 		CEB27CA52B0DF0CE0074CCAF /* Clock-CombineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Clock-CombineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB27CA92B0DF0CE0074CCAF /* Clock_CombineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock_CombineUITests.swift; sourceTree = "<group>"; };
 		CEB27CAB2B0DF0CE0074CCAF /* Clock_CombineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock_CombineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEB27CC02B0DF2D90074CCAF /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
+		CEB27CC22B0DF3060074CCAF /* JHStopwatchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHStopwatchVC.swift; sourceTree = "<group>"; };
+		CEB27CC42B0DF3220074CCAF /* YSStopwatchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSStopwatchVC.swift; sourceTree = "<group>"; };
+		CEB27CC62B0DF3310074CCAF /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
+		CEB27CC82B0DF34C0074CCAF /* WorldClockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +107,8 @@
 		CEB27C872B0DF0CC0074CCAF /* Clock-Combine */ = {
 			isa = PBXGroup;
 			children = (
-				CEB27C882B0DF0CC0074CCAF /* AppDelegate.swift */,
-				CEB27C8A2B0DF0CC0074CCAF /* SceneDelegate.swift */,
-				CEB27C8C2B0DF0CC0074CCAF /* ViewController.swift */,
+				CEB27CB92B0DF1FB0074CCAF /* Features */,
+				CEB27CB82B0DF1DD0074CCAF /* Supports */,
 				CEB27C912B0DF0CD0074CCAF /* Assets.xcassets */,
 				CEB27C932B0DF0CD0074CCAF /* LaunchScreen.storyboard */,
 				CEB27C962B0DF0CD0074CCAF /* Info.plist */,
@@ -122,6 +131,68 @@
 				CEB27CAB2B0DF0CE0074CCAF /* Clock_CombineUITestsLaunchTests.swift */,
 			);
 			path = "Clock-CombineUITests";
+			sourceTree = "<group>";
+		};
+		CEB27CB82B0DF1DD0074CCAF /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				CEB27C8C2B0DF0CC0074CCAF /* TabBarController.swift */,
+				CEB27C882B0DF0CC0074CCAF /* AppDelegate.swift */,
+				CEB27C8A2B0DF0CC0074CCAF /* SceneDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		CEB27CB92B0DF1FB0074CCAF /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				CEB27CBA2B0DF20C0074CCAF /* WorldClock */,
+				CEB27CBB2B0DF2130074CCAF /* Alarm */,
+				CEB27CBD2B0DF23F0074CCAF /* JHStopwatch */,
+				CEB27CBC2B0DF22E0074CCAF /* YSStopwatch */,
+				CEB27CBE2B0DF2B90074CCAF /* Timer */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		CEB27CBA2B0DF20C0074CCAF /* WorldClock */ = {
+			isa = PBXGroup;
+			children = (
+				CEB27CC82B0DF34C0074CCAF /* WorldClockVC.swift */,
+			);
+			path = WorldClock;
+			sourceTree = "<group>";
+		};
+		CEB27CBB2B0DF2130074CCAF /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				CEB27CC62B0DF3310074CCAF /* AlarmVC.swift */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		CEB27CBC2B0DF22E0074CCAF /* YSStopwatch */ = {
+			isa = PBXGroup;
+			children = (
+				CEB27CC42B0DF3220074CCAF /* YSStopwatchVC.swift */,
+			);
+			path = YSStopwatch;
+			sourceTree = "<group>";
+		};
+		CEB27CBD2B0DF23F0074CCAF /* JHStopwatch */ = {
+			isa = PBXGroup;
+			children = (
+				CEB27CC22B0DF3060074CCAF /* JHStopwatchVC.swift */,
+			);
+			path = JHStopwatch;
+			sourceTree = "<group>";
+		};
+		CEB27CBE2B0DF2B90074CCAF /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				CEB27CC02B0DF2D90074CCAF /* TimerVC.swift */,
+			);
+			path = Timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +325,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB27C8D2B0DF0CC0074CCAF /* ViewController.swift in Sources */,
+				CEB27CC72B0DF3310074CCAF /* AlarmVC.swift in Sources */,
+				CEB27CC12B0DF2D90074CCAF /* TimerVC.swift in Sources */,
+				CEB27CC92B0DF34C0074CCAF /* WorldClockVC.swift in Sources */,
+				CEB27C8D2B0DF0CC0074CCAF /* TabBarController.swift in Sources */,
+				CEB27CC52B0DF3220074CCAF /* YSStopwatchVC.swift in Sources */,
 				CEB27C892B0DF0CC0074CCAF /* AppDelegate.swift in Sources */,
+				CEB27CC32B0DF3060074CCAF /* JHStopwatchVC.swift in Sources */,
 				CEB27C8B2B0DF0CC0074CCAF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
