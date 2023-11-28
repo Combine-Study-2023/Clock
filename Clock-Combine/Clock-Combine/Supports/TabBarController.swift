@@ -20,7 +20,7 @@ extension TabBarController {
     private func setUI() {
         tabBar.backgroundColor = .black
         tabBar.unselectedItemTintColor = .gray
-        tabBar.tintColor = .orange
+        tabBar.tintColor = .systemOrange
     }
     
     private func setTabBarControllers() {
