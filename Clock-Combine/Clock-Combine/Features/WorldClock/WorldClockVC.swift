@@ -46,7 +46,6 @@ final class WorldClockVC: UIViewController {
     }
     
     private func setNavigationBar() {
-        self.navigationItem.title = "세계 시계"
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         self.navigationItem.leftBarButtonItem = self.editButton
@@ -109,6 +108,10 @@ extension WorldClockVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 64
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.navigationItem.title = scrollView.contentOffset.y > 30 ? "세계 시계" : nil
     }
 }
 
