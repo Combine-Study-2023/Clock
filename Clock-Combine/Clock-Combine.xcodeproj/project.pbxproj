@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEB1C4A92B162E5100BC1B75 /* WorldClockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1C4A82B162E5100BC1B75 /* WorldClockTableViewCell.swift */; };
+		CEB1C4AB2B162F0200BC1B75 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1C4AA2B162F0200BC1B75 /* NSObject+.swift */; };
+		CEB1C4AD2B162FA000BC1B75 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1C4AC2B162FA000BC1B75 /* UIColor+.swift */; };
 		CEB27C892B0DF0CC0074CCAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27C882B0DF0CC0074CCAF /* AppDelegate.swift */; };
 		CEB27C8B2B0DF0CC0074CCAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27C8A2B0DF0CC0074CCAF /* SceneDelegate.swift */; };
 		CEB27C8D2B0DF0CC0074CCAF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27C8C2B0DF0CC0074CCAF /* TabBarController.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CEB1C4A82B162E5100BC1B75 /* WorldClockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockTableViewCell.swift; sourceTree = "<group>"; };
+		CEB1C4AA2B162F0200BC1B75 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
+		CEB1C4AC2B162FA000BC1B75 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		CEB27C852B0DF0CC0074CCAF /* Clock-Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clock-Combine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB27C882B0DF0CC0074CCAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB27C8A2B0DF0CC0074CCAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +96,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEB1C4A52B162E3100BC1B75 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				CEB27CC82B0DF34C0074CCAF /* WorldClockVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		CEB1C4A62B162E3400BC1B75 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEB1C4A72B162E3C00BC1B75 /* Cell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEB1C4A72B162E3C00BC1B75 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEB1C4A82B162E5100BC1B75 /* WorldClockTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CEB27C7C2B0DF0CC0074CCAF = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +195,8 @@
 		CEB27CBA2B0DF20C0074CCAF /* WorldClock */ = {
 			isa = PBXGroup;
 			children = (
-				CEB27CC82B0DF34C0074CCAF /* WorldClockVC.swift */,
+				CEB1C4A62B162E3400BC1B75 /* Views */,
+				CEB1C4A52B162E3100BC1B75 /* VC */,
 			);
 			path = WorldClock;
 			sourceTree = "<group>";
@@ -207,6 +238,8 @@
 			children = (
 				CEB27CD02B0DF9D80074CCAF /* Combine+ */,
 				CEB27CCE2B0DF95C0074CCAF /* UIView+.swift */,
+				CEB1C4AA2B162F0200BC1B75 /* NSObject+.swift */,
+				CEB1C4AC2B162FA000BC1B75 /* UIColor+.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -356,13 +389,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB27CC72B0DF3310074CCAF /* AlarmVC.swift in Sources */,
+				CEB1C4AB2B162F0200BC1B75 /* NSObject+.swift in Sources */,
 				CEB27CC12B0DF2D90074CCAF /* TimerVC.swift in Sources */,
 				CEB27CC92B0DF34C0074CCAF /* WorldClockVC.swift in Sources */,
+				CEB1C4A92B162E5100BC1B75 /* WorldClockTableViewCell.swift in Sources */,
 				CEB27C8D2B0DF0CC0074CCAF /* TabBarController.swift in Sources */,
 				CEB27CD22B0DF9F20074CCAF /* Publisher+UIControl.swift in Sources */,
 				CEB27CC52B0DF3220074CCAF /* YSStopwatchVC.swift in Sources */,
 				CEB27C892B0DF0CC0074CCAF /* AppDelegate.swift in Sources */,
 				CEB27CCF2B0DF95C0074CCAF /* UIView+.swift in Sources */,
+				CEB1C4AD2B162FA000BC1B75 /* UIColor+.swift in Sources */,
 				CEB27CC32B0DF3060074CCAF /* JHStopwatchVC.swift in Sources */,
 				CEB27C8B2B0DF0CC0074CCAF /* SceneDelegate.swift in Sources */,
 			);

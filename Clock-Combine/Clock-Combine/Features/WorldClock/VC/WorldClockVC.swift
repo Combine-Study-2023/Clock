@@ -26,6 +26,8 @@ final class WorldClockVC: UIViewController {
     private let worldClockTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.backgroundColor = .clear
+        tableView.separatorStyle = .singleLine
+        tableView.separatorColor = UIColor(hexCode: "39393B")
         return tableView
     }()
     
@@ -37,6 +39,7 @@ final class WorldClockVC: UIViewController {
         self.setNavigationBar()
         self.setLayout()
         self.setDelegate()
+        self.registerCells()
     }
     
     // MARK: - Methods
@@ -70,6 +73,10 @@ final class WorldClockVC: UIViewController {
     private func setDelegate() {
         self.worldClockTableView.delegate = self
         self.worldClockTableView.dataSource = self
+    }
+    
+    private func registerCells() {
+        self.worldClockTableView.register(WorldClockTableViewCell.self, forCellReuseIdentifier: WorldClockTableViewCell.className)
     }
     
     // MARK: - @objc Function
@@ -127,8 +134,12 @@ extension WorldClockVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.backgroundColor = [UIColor.red, .blue, .green].randomElement()!
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: WorldClockTableViewCell.className, 
+                                                       for: indexPath) as? WorldClockTableViewCell
+        else {
+            return UITableViewCell()
+        }
+        
         return cell
     }
 }
