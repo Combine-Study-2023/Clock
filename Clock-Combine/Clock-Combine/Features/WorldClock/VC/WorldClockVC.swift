@@ -54,6 +54,7 @@ final class WorldClockVC: UIViewController {
         self.navigationItem.leftBarButtonItem = self.editButton
         self.navigationItem.rightBarButtonItem = self.addButton
         self.navigationController?.navigationBar.tintColor = .systemOrange
+        self.navigationController?.navigationBar.barTintColor = .black
     }
     
     private func setLayout() {
