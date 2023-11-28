@@ -54,7 +54,6 @@ extension TabBarController {
         nav.title = title
         nav.tabBarItem.image = unselectedImage
         nav.tabBarItem.selectedImage = selectedImage
-        nav.navigationBar.isHidden = true
         return nav
     }
 }
