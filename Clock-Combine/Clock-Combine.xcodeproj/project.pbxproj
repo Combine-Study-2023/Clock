@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FB1B3132B1DA4C90009864A /* YSStopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B3122B1DA4C90009864A /* YSStopwatchView.swift */; };
+		2FB1B3152B1DB09C0009864A /* LabTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B3142B1DB09C0009864A /* LabTableView.swift */; };
+		2FB1B3172B1DB0AA0009864A /* LabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B3162B1DB0AA0009864A /* LabTableViewCell.swift */; };
 		CEB27C892B0DF0CC0074CCAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27C882B0DF0CC0074CCAF /* AppDelegate.swift */; };
 		CEB27C8B2B0DF0CC0074CCAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27C8A2B0DF0CC0074CCAF /* SceneDelegate.swift */; };
 		CEB27C8D2B0DF0CC0074CCAF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27C8C2B0DF0CC0074CCAF /* TabBarController.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FB1B3122B1DA4C90009864A /* YSStopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSStopwatchView.swift; sourceTree = "<group>"; };
+		2FB1B3142B1DB09C0009864A /* LabTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabTableView.swift; sourceTree = "<group>"; };
+		2FB1B3162B1DB0AA0009864A /* LabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabTableViewCell.swift; sourceTree = "<group>"; };
 		CEB27C852B0DF0CC0074CCAF /* Clock-Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clock-Combine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB27C882B0DF0CC0074CCAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB27C8A2B0DF0CC0074CCAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				CEB27CC42B0DF3220074CCAF /* YSStopwatchVC.swift */,
+				2FB1B3122B1DA4C90009864A /* YSStopwatchView.swift */,
+				2FB1B3142B1DB09C0009864A /* LabTableView.swift */,
+				2FB1B3162B1DB0AA0009864A /* LabTableViewCell.swift */,
 			);
 			path = YSStopwatch;
 			sourceTree = "<group>";
@@ -357,7 +366,9 @@
 			files = (
 				CEB27CC72B0DF3310074CCAF /* AlarmVC.swift in Sources */,
 				CEB27CC12B0DF2D90074CCAF /* TimerVC.swift in Sources */,
+				2FB1B3132B1DA4C90009864A /* YSStopwatchView.swift in Sources */,
 				CEB27CC92B0DF34C0074CCAF /* WorldClockVC.swift in Sources */,
+				2FB1B3172B1DB0AA0009864A /* LabTableViewCell.swift in Sources */,
 				CEB27C8D2B0DF0CC0074CCAF /* TabBarController.swift in Sources */,
 				CEB27CD22B0DF9F20074CCAF /* Publisher+UIControl.swift in Sources */,
 				CEB27CC52B0DF3220074CCAF /* YSStopwatchVC.swift in Sources */,
@@ -365,6 +376,7 @@
 				CEB27CCF2B0DF95C0074CCAF /* UIView+.swift in Sources */,
 				CEB27CC32B0DF3060074CCAF /* JHStopwatchVC.swift in Sources */,
 				CEB27C8B2B0DF0CC0074CCAF /* SceneDelegate.swift in Sources */,
+				2FB1B3152B1DB09C0009864A /* LabTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
