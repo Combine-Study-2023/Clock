@@ -101,10 +101,10 @@ final class WorldClockVC: UIViewController {
     }
     
     private func bindViews() {
-        addButton.publisher.sink { sdf in
+        addButton.publisher.sink { _ in
             let worldCityListVC = WorldCityListVC()
-            worldCityListVC.modalTransitionStyle = .coverVertical
-            self.present(worldCityListVC, animated: true)
+            let nav = UINavigationController(rootViewController: worldCityListVC)
+            self.present(nav, animated: true)
         }.store(in: &subscriptions)
     }
 }
