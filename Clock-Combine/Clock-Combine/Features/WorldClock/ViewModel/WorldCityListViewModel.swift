@@ -48,13 +48,15 @@ final class WorldCityListViewModel {
             
             regionName = data.joined()
             
-            worldClickArray.append((regionName, timezone))
+            if !regionName.isEmpty {
+                worldClickArray.append((regionName, timezone))
+            }
         }
         
         worldClickArray.sort { lhs, rhs in
             lhs.0 < rhs.0
         }
-        
+
         self.cities = worldClickArray
     }
     
