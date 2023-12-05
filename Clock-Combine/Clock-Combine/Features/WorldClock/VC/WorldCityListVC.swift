@@ -66,12 +66,14 @@ final class WorldCityListVC: UITableViewController {
     private func bindViewModel() {
         self.viewModel
             .transform(viewDidLoad: Just<Void>(()).eraseToAnyPublisher())
+            .receive(on: DispatchQueue.main)
             .sink { _ in
                 self.tableView.reloadData()
             }.store(in: &subscriptions)
         
         self.viewModel
             .transform(searchText: searchText.eraseToAnyPublisher())
+            .receive(on: DispatchQueue.main)
             .subscribe(searchResultsTableController.cities)
             .store(in: &subscriptions)
     }

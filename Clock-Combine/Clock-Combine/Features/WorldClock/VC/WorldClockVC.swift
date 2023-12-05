@@ -112,8 +112,9 @@ final class WorldClockVC: UIViewController {
     
     private func bindCityListVC(vc: WorldCityListVC) {
         vc.selectedCity.sink { cityData in
+            print(cityData)
             self.viewModel.addCity(data: cityData)
-            vc.dismiss(animated: true)
+            self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
         }.store(in: &subscriptions)
     }
     
@@ -174,7 +175,7 @@ extension WorldClockVC: UITableViewDataSource {
         
         let model = viewModel.wordTimeList.value[indexPath.item]
         
-        cell.initCell(timeDifference: " 대한", city: model.name, time: model.time)
+        cell.initCell(timeDifference: " ", city: model.name, time: model.time)
         
         return cell
     }

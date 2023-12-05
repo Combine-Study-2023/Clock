@@ -15,7 +15,9 @@ final class WorldCityListViewModel {
     var cities = [WorldCityData]()
     
     func transform(viewDidLoad: AnyPublisher<Void, Never>) -> AnyPublisher<Void, Never> {
-        return viewDidLoad.map { _ in
+        return viewDidLoad
+            .receive(on: DispatchQueue.global())
+            .map { _ in
             self.getCityNames()
         }.eraseToAnyPublisher()
     }
@@ -23,6 +25,7 @@ final class WorldCityListViewModel {
     func transform(searchText: AnyPublisher<String, Never>) -> AnyPublisher<[WorldCityData], Never> {
         return searchText
             .throttle(for: 0.3, scheduler: DispatchQueue.main, latest: true)
+            .receive(on: DispatchQueue.global())
             .map { text in
                 return self.filterCities(text: text)
             }.eraseToAnyPublisher()

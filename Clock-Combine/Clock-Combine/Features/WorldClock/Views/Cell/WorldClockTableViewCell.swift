@@ -64,6 +64,7 @@ final class WorldClockTableViewCell: UITableViewCell {
     
     private func setUI() {
         self.backgroundColor = .clear
+        self.selectionStyle = .none
     }
     
     private func setLayout() {
