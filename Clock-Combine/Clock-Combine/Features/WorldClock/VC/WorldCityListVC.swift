@@ -69,9 +69,8 @@ final class WorldCityListVC: UITableViewController {
         
         self.viewModel
             .transform(searchText: searchText.eraseToAnyPublisher())
-            .sink { list in
-                print(list)
-            }.store(in: &subscriptions)
+            .subscribe(searchResultsTableController.cities)
+            .store(in: &subscriptions)
     }
 }
 

@@ -11,9 +11,10 @@ import Combine
 final class WorldCityListResultsTableController: UITableViewController {
     
     // MARK: - Properties
+    
     private var subscriptions = Set<AnyCancellable>()
     
-    var cities = [WorldCityData]()
+    let cities = CurrentValueSubject<[WorldCityData], Never>([])
     
     // MARK: - View Life Cycle
     
@@ -24,11 +25,14 @@ final class WorldCityListResultsTableController: UITableViewController {
     }
     
     private func setUI() {
-        self.view.backgroundColor = .clear
+        self.view.backgroundColor = UIColor(hexCode: "1c1c1e")
         self.tableView.register(WorldCityTableViewCell.self, forCellReuseIdentifier: WorldCityTableViewCell.className)
     }
     
     private func bind() {
+        cities.sink { _ in
+            self.tableView.reloadData()
+        }.store(in: &subscriptions)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -36,7 +40,7 @@ final class WorldCityListResultsTableController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.cities.count
+        return self.cities.value.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,8 +48,7 @@ final class WorldCityListResultsTableController: UITableViewController {
                                                        for: indexPath) as? WorldCityTableViewCell
         else { return UITableViewCell() }
         
-        
-        cell.initCell(city: self.cities[indexPath.item].0)
+        cell.initCell(city: self.cities.value[indexPath.item].0)
         
         return cell
     }
