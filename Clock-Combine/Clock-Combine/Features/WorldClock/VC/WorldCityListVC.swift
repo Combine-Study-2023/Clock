@@ -8,21 +8,19 @@
 import UIKit
 import Combine
 
-final class WorldCityListVC: UIViewController {
+final class WorldCityListVC: UITableViewController {
     
     // MARK: - Properties
     
     private var subscriptions = Set<AnyCancellable>()
     
+    private let searchText = PassthroughSubject<String, Never>()
+    
     // MARK: - UI Components
     
-    private let searchController = UISearchController(searchResultsController: nil)
+    private let searchResultsTableController = WorldCityListResultsTableController()
     
-    private let tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.backgroundColor = .clear
-        return tableView
-    }()
+    private lazy var searchController = UISearchController(searchResultsController: self.searchResultsTableController)
     
     private let viewModel = WorldCityListViewModel()
     
@@ -32,9 +30,8 @@ final class WorldCityListVC: UIViewController {
         super.viewDidLoad()
         self.setUI()
         self.setSearchController()
-        self.setLayout()
-        self.setTableView()
         self.bindViewModel()
+        self.setTableView()
     }
     
     // MARK: - Methods
@@ -54,23 +51,12 @@ final class WorldCityListVC: UIViewController {
         searchController.searchBar.searchTextField.textColor = .white
         self.navigationItem.title = "도시 선택"
         self.navigationItem.hidesSearchBarWhenScrolling = false
-    }
-    
-    private func setLayout() {
-        self.view.addSubview(tableView)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
-        ])
+        searchController.delegate = self
+        searchController.searchResultsUpdater = self
     }
     
     private func setTableView() {
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
         self.tableView.register(WorldCityTableViewCell.self, forCellReuseIdentifier: WorldCityTableViewCell.className)
     }
     
@@ -80,25 +66,37 @@ final class WorldCityListVC: UIViewController {
             .sink { _ in
                 self.tableView.reloadData()
             }.store(in: &subscriptions)
+        
+        self.viewModel
+            .transform(searchText: searchText.eraseToAnyPublisher())
+            .sink { list in
+                print(list)
+            }.store(in: &subscriptions)
     }
 }
 
-extension WorldCityListVC: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+extension WorldCityListVC {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.cities.count
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.viewModel.cities.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: WorldCityTableViewCell.className,
                                                        for: indexPath) as? WorldCityTableViewCell
         else { return UITableViewCell() }
         
-        cell.initCell(city: viewModel.cities[indexPath.item])
+        cell.initCell(city: self.viewModel.cities[indexPath.item].0)
         
         return cell
+    }
+}
+
+extension WorldCityListVC: UISearchControllerDelegate {
+}
+
+extension WorldCityListVC: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let text = searchController.searchBar.text!
+        self.searchText.send(text)
     }
 }

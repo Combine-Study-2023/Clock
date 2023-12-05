@@ -11,6 +11,7 @@
 		CE08D5192B1F794E005CDA4A /* WorldCityListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08D5182B1F794E005CDA4A /* WorldCityListVC.swift */; };
 		CE08D51B2B1F7EB9005CDA4A /* WorldCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08D51A2B1F7EB9005CDA4A /* WorldCityTableViewCell.swift */; };
 		CE08D51D2B1F7F54005CDA4A /* WorldCityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08D51C2B1F7F54005CDA4A /* WorldCityListViewModel.swift */; };
+		CE08D51F2B1F8540005CDA4A /* WorldCityListResultsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08D51E2B1F8540005CDA4A /* WorldCityListResultsTableController.swift */; };
 		CEB1C4A92B162E5100BC1B75 /* WorldClockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1C4A82B162E5100BC1B75 /* WorldClockTableViewCell.swift */; };
 		CEB1C4AB2B162F0200BC1B75 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1C4AA2B162F0200BC1B75 /* NSObject+.swift */; };
 		CEB1C4AD2B162FA000BC1B75 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1C4AC2B162FA000BC1B75 /* UIColor+.swift */; };
@@ -54,6 +55,7 @@
 		CE08D5182B1F794E005CDA4A /* WorldCityListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCityListVC.swift; sourceTree = "<group>"; };
 		CE08D51A2B1F7EB9005CDA4A /* WorldCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCityTableViewCell.swift; sourceTree = "<group>"; };
 		CE08D51C2B1F7F54005CDA4A /* WorldCityListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCityListViewModel.swift; sourceTree = "<group>"; };
+		CE08D51E2B1F8540005CDA4A /* WorldCityListResultsTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCityListResultsTableController.swift; sourceTree = "<group>"; };
 		CEB1C4A82B162E5100BC1B75 /* WorldClockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockTableViewCell.swift; sourceTree = "<group>"; };
 		CEB1C4AA2B162F0200BC1B75 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		CEB1C4AC2B162FA000BC1B75 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				CEB27CC82B0DF34C0074CCAF /* WorldClockVC.swift */,
 				CE08D5182B1F794E005CDA4A /* WorldCityListVC.swift */,
+				CE08D51E2B1F8540005CDA4A /* WorldCityListResultsTableController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				CEB27CC72B0DF3310074CCAF /* AlarmVC.swift in Sources */,
 				CEB1C4AB2B162F0200BC1B75 /* NSObject+.swift in Sources */,
 				CE08D5172B1F78B4005CDA4A /* WorldClockViewModel.swift in Sources */,
+				CE08D51F2B1F8540005CDA4A /* WorldCityListResultsTableController.swift in Sources */,
 				CE08D5192B1F794E005CDA4A /* WorldCityListVC.swift in Sources */,
 				CEB27CC12B0DF2D90074CCAF /* TimerVC.swift in Sources */,
 				CEB27CC92B0DF34C0074CCAF /* WorldClockVC.swift in Sources */,
