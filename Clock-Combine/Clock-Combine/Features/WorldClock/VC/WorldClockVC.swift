@@ -6,8 +6,15 @@
 //
 
 import UIKit
+import Combine
 
 final class WorldClockVC: UIViewController {
+    
+    // MARK: - Properties
+    
+    private let viewModel = WorldClockViewModel()
+    
+    private var subscriptions = Set<AnyCancellable>()
     
     // MARK: - UI Components
     
@@ -40,6 +47,7 @@ final class WorldClockVC: UIViewController {
         self.setLayout()
         self.setDelegate()
         self.registerCells()
+        self.bindViews()
     }
     
     // MARK: - Methods
@@ -90,6 +98,14 @@ final class WorldClockVC: UIViewController {
     @objc
     private func addButtonDidTap() {
         print("추가 버튼 터치")
+    }
+    
+    private func bindViews() {
+        addButton.publisher.sink { sdf in
+            let worldCityListVC = WorldCityListVC()
+            worldCityListVC.modalTransitionStyle = .coverVertical
+            self.present(worldCityListVC, animated: true)
+        }.store(in: &subscriptions)
     }
 }
 
