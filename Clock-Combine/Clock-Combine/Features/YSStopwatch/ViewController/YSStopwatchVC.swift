@@ -14,7 +14,7 @@ final class YSStopwatchVC: UIViewController {
     // MARK: - UI Components
     
     private let stopwatchView = YSStopwatchView()
-    private lazy var tableView = stopwatchView.labTableView.tableView
+    private lazy var tableView = stopwatchView.lapTableView.tableView
     
     // MARK: - Life Cycles
     
@@ -71,12 +71,18 @@ extension YSStopwatchVC: UITableViewDelegate {
 
 extension YSStopwatchVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return stopwatchView.lapTableviewData.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: LabTableViewCell.identifier, for: indexPath) as? LabTableViewCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: LabTableViewCell.identifier, for: indexPath) as? LabTableViewCell else { return UITableViewCell() }
         cell.backgroundColor = .clear
         cell.selectionStyle = .none
+
+        let lap = stopwatchView.lapTableviewData.count - (indexPath as NSIndexPath).row
+        cell.lapLabel.text = "랩 \(lap)"
+        cell.diffLabel.text = "\(stopwatchView.diffTableViewData[lap-1])"
+
         return cell
     }
+
 }

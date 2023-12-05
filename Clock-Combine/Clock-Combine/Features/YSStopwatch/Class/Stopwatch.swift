@@ -1,5 +1,5 @@
 //
-//  StopWatch.swift
+//  Stopwatch.swift
 //  Clock-Combine
 //
 //  Created by yeonsu on 12/4/23.

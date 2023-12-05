@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class LabTableView: UIView {
+final class LapTableView: UIView {
 
     // MARK: - Properties
     
@@ -47,7 +47,7 @@ final class LabTableView: UIView {
 }
 
 // MARK: - Extensions
-extension LabTableView {
+extension LapTableView {
     func setUI() {
         
     }

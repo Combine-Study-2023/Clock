@@ -14,22 +14,34 @@ final class LabTableViewCell: UITableViewCell {
     static let identifier: String = "LabTableViewCell"
     
     // MARK: - UI Components
-    private let timerLabel: UILabel = {
+    public let lapLabel: UILabel = {
+        let label = UILabel()
+        label.text = "랩"
+        label.textColor = .white
+        label.numberOfLines = 1
+        label.adjustsFontSizeToFitWidth = true
+        
+        let fontSize = UIFont.systemFont(ofSize: 17, weight: .medium)
+        label.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: fontSize)
+        label.adjustsFontForContentSizeCategory = true
+        return label
+    }()
+    
+    public let diffLabel: UILabel = {
         let label = UILabel()
         label.text = "00:00.00"
         label.textColor = .white
         label.numberOfLines = 1
         label.adjustsFontSizeToFitWidth = true
         
-        let fontSize = UIFont.systemFont(ofSize: 17, weight: .thin)
+        let fontSize = UIFont.systemFont(ofSize: 17, weight: .medium)
         label.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: fontSize)
         label.adjustsFontForContentSizeCategory = true
         return label
     }()
     
     // MARK: - Life Cycles
-    
-    // UITableViewCell인 경우
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -50,13 +62,17 @@ extension LabTableViewCell {
     }
     
     func setHierarchy() {
-        addSubviews(timerLabel)
+        addSubviews(lapLabel, diffLabel)
     }
     
     func setLayout() {
-        timerLabel.snp.makeConstraints {
+        lapLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(16)
             $0.centerY.equalToSuperview()
+        }
+        diffLabel.snp.makeConstraints {
+            $0.trailing.equalToSuperview().offset(-16)
+            $0.centerY.equalTo(lapLabel)
         }
     }
     
