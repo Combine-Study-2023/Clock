@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FE6C3D12B1EF21800209599 /* StopwatchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6C3D02B1EF21800209599 /* StopwatchButton.swift */; };
+		3FE6C3D32B1F148300209599 /* JHStopwatchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6C3D22B1F148300209599 /* JHStopwatchVM.swift */; };
+		3FE6C3D52B1F14F500209599 /* LapTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6C3D42B1F14F500209599 /* LapTimeTableViewCell.swift */; };
 		CEB27C892B0DF0CC0074CCAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27C882B0DF0CC0074CCAF /* AppDelegate.swift */; };
 		CEB27C8B2B0DF0CC0074CCAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27C8A2B0DF0CC0074CCAF /* SceneDelegate.swift */; };
 		CEB27C8D2B0DF0CC0074CCAF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27C8C2B0DF0CC0074CCAF /* TabBarController.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FE6C3D02B1EF21800209599 /* StopwatchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchButton.swift; sourceTree = "<group>"; };
+		3FE6C3D22B1F148300209599 /* JHStopwatchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHStopwatchVM.swift; sourceTree = "<group>"; };
+		3FE6C3D42B1F14F500209599 /* LapTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTimeTableViewCell.swift; sourceTree = "<group>"; };
 		CEB27C852B0DF0CC0074CCAF /* Clock-Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clock-Combine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB27C882B0DF0CC0074CCAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB27C8A2B0DF0CC0074CCAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +196,9 @@
 			isa = PBXGroup;
 			children = (
 				CEB27CC22B0DF3060074CCAF /* JHStopwatchVC.swift */,
+				3FE6C3D22B1F148300209599 /* JHStopwatchVM.swift */,
+				3FE6C3D02B1EF21800209599 /* StopwatchButton.swift */,
+				3FE6C3D42B1F14F500209599 /* LapTimeTableViewCell.swift */,
 			);
 			path = JHStopwatch;
 			sourceTree = "<group>";
@@ -363,8 +372,11 @@
 				CEB27CC52B0DF3220074CCAF /* YSStopwatchVC.swift in Sources */,
 				CEB27C892B0DF0CC0074CCAF /* AppDelegate.swift in Sources */,
 				CEB27CCF2B0DF95C0074CCAF /* UIView+.swift in Sources */,
+				3FE6C3D32B1F148300209599 /* JHStopwatchVM.swift in Sources */,
 				CEB27CC32B0DF3060074CCAF /* JHStopwatchVC.swift in Sources */,
+				3FE6C3D12B1EF21800209599 /* StopwatchButton.swift in Sources */,
 				CEB27C8B2B0DF0CC0074CCAF /* SceneDelegate.swift in Sources */,
+				3FE6C3D52B1F14F500209599 /* LapTimeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
