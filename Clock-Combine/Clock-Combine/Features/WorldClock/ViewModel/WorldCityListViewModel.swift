@@ -18,8 +18,8 @@ final class WorldCityListViewModel {
         return viewDidLoad
             .receive(on: DispatchQueue.global())
             .map { _ in
-            self.getCityNames()
-        }.eraseToAnyPublisher()
+                self.getCityNames()
+            }.eraseToAnyPublisher()
     }
     
     func transform(searchText: AnyPublisher<String, Never>) -> AnyPublisher<[WorldCityData], Never> {
@@ -56,7 +56,7 @@ final class WorldCityListViewModel {
         worldClickArray.sort { lhs, rhs in
             lhs.0 < rhs.0
         }
-
+        
         self.cities = worldClickArray
     }
     
