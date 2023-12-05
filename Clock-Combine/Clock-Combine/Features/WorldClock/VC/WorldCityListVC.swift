@@ -42,12 +42,18 @@ final class WorldCityListVC: UIViewController {
     private func setUI() {
         self.view.backgroundColor = UIColor(hexCode: "1c1c1e")
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.backgroundColor = UIColor(hexCode: "1c1c1e")
+        self.navigationController?.navigationBar.tintColor = UIColor.orange
+        self.navigationController?.navigationBar.barTintColor = UIColor(hexCode: "1c1c1e")
     }
     
     private func setSearchController() {
         self.navigationItem.searchController = searchController
-        searchController.searchBar.placeholder = "검색"
+        self.searchController.searchBar.searchTextField.attributedPlaceholder =  NSAttributedString.init(string: "검색",
+                                                                                                         attributes: [.foregroundColor: UIColor.gray])
+        searchController.searchBar.searchTextField.textColor = .white
         self.navigationItem.title = "도시 선택"
+        self.navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     private func setLayout() {
