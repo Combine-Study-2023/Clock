@@ -16,6 +16,8 @@ final class WorldCityListVC: UITableViewController {
     
     private let searchText = PassthroughSubject<String, Never>()
     
+    let selectedCity = PassthroughSubject<WorldCityData, Never>()
+    
     // MARK: - UI Components
     
     private let searchResultsTableController = WorldCityListResultsTableController()
@@ -30,6 +32,7 @@ final class WorldCityListVC: UITableViewController {
         super.viewDidLoad()
         self.setUI()
         self.setSearchController()
+        self.bindViews()
         self.bindViewModel()
         self.setTableView()
     }
@@ -72,9 +75,20 @@ final class WorldCityListVC: UITableViewController {
             .subscribe(searchResultsTableController.cities)
             .store(in: &subscriptions)
     }
+    
+    private func bindViews() {
+        self.searchResultsTableController.selectedCity
+            .subscribe(self.selectedCity)
+            .store(in: &subscriptions)
+    }
 }
 
 extension WorldCityListVC {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let city = self.viewModel.cities[indexPath.item]
+        self.selectedCity.send(city)
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.cities.count
     }

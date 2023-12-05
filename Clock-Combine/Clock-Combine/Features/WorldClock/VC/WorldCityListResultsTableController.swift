@@ -16,6 +16,8 @@ final class WorldCityListResultsTableController: UITableViewController {
     
     let cities = CurrentValueSubject<[WorldCityData], Never>([])
     
+    let selectedCity = PassthroughSubject<WorldCityData, Never>()
+
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -51,5 +53,10 @@ final class WorldCityListResultsTableController: UITableViewController {
         cell.initCell(city: self.cities.value[indexPath.item].0)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let city = self.cities.value[indexPath.item]
+        self.selectedCity.send(city)
     }
 }

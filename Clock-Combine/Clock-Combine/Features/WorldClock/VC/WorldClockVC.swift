@@ -48,6 +48,7 @@ final class WorldClockVC: UIViewController {
         self.setDelegate()
         self.registerCells()
         self.bindViews()
+        self.bindViewModel()
     }
     
     // MARK: - Methods
@@ -103,8 +104,22 @@ final class WorldClockVC: UIViewController {
     private func bindViews() {
         addButton.publisher.sink { _ in
             let worldCityListVC = WorldCityListVC()
+            self.bindCityListVC(vc: worldCityListVC)
             let nav = UINavigationController(rootViewController: worldCityListVC)
             self.present(nav, animated: true)
+        }.store(in: &subscriptions)
+    }
+    
+    private func bindCityListVC(vc: WorldCityListVC) {
+        vc.selectedCity.sink { cityData in
+            self.viewModel.addCity(data: cityData)
+            vc.dismiss(animated: true)
+        }.store(in: &subscriptions)
+    }
+    
+    private func bindViewModel() {
+        self.viewModel.wordTimeList.sink { _ in
+            self.worldClockTableView.reloadData()
         }.store(in: &subscriptions)
     }
 }
@@ -147,7 +162,7 @@ extension WorldClockVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.viewModel.wordTimeList.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -156,6 +171,10 @@ extension WorldClockVC: UITableViewDataSource {
         else {
             return UITableViewCell()
         }
+        
+        let model = viewModel.wordTimeList.value[indexPath.item]
+        
+        cell.initCell(timeDifference: " 대한", city: model.name, time: model.time)
         
         return cell
     }

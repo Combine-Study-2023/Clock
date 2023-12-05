@@ -31,6 +31,7 @@
 		CEB27CCC2B0DF93E0074CCAF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEB27CCB2B0DF93E0074CCAF /* SnapKit */; };
 		CEB27CCF2B0DF95C0074CCAF /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27CCE2B0DF95C0074CCAF /* UIView+.swift */; };
 		CEB27CD22B0DF9F20074CCAF /* Publisher+UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB27CD12B0DF9F20074CCAF /* Publisher+UIControl.swift */; };
+		CEBC68F12B1F96CA0074BE39 /* WorldTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC68F02B1F96CA0074BE39 /* WorldTimeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		CEB27CC82B0DF34C0074CCAF /* WorldClockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockVC.swift; sourceTree = "<group>"; };
 		CEB27CCE2B0DF95C0074CCAF /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		CEB27CD12B0DF9F20074CCAF /* Publisher+UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+UIControl.swift"; sourceTree = "<group>"; };
+		CEBC68F02B1F96CA0074BE39 /* WorldTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTimeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 		CEB27CBA2B0DF20C0074CCAF /* WorldClock */ = {
 			isa = PBXGroup;
 			children = (
+				CEBC68EF2B1F96C30074BE39 /* Model */,
 				CE08D5152B1F78A8005CDA4A /* ViewModel */,
 				CEB1C4A62B162E3400BC1B75 /* Views */,
 				CEB1C4A52B162E3100BC1B75 /* VC */,
@@ -273,6 +276,14 @@
 				CEB27CD12B0DF9F20074CCAF /* Publisher+UIControl.swift */,
 			);
 			path = "Combine+";
+			sourceTree = "<group>";
+		};
+		CEBC68EF2B1F96C30074BE39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEBC68F02B1F96CA0074BE39 /* WorldTimeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +424,7 @@
 			files = (
 				CEB27CC72B0DF3310074CCAF /* AlarmVC.swift in Sources */,
 				CEB1C4AB2B162F0200BC1B75 /* NSObject+.swift in Sources */,
+				CEBC68F12B1F96CA0074BE39 /* WorldTimeModel.swift in Sources */,
 				CE08D5172B1F78B4005CDA4A /* WorldClockViewModel.swift in Sources */,
 				CE08D51F2B1F8540005CDA4A /* WorldCityListResultsTableController.swift in Sources */,
 				CE08D5192B1F794E005CDA4A /* WorldCityListVC.swift in Sources */,

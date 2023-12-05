@@ -23,7 +23,7 @@ final class WorldClockTableViewCell: UITableViewCell {
         let label = UILabel()
         label.text = "서울"
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 28, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 22, weight: .regular)
         return label
     }()
     
@@ -31,7 +31,7 @@ final class WorldClockTableViewCell: UITableViewCell {
         let label = UILabel()
         label.text = "23:25"
         label.textColor = UIColor(hexCode: "FFFFFF", alpha: 0.5)
-        label.font = UIFont.systemFont(ofSize: 60, weight: .light)
+        label.font = UIFont.systemFont(ofSize: 48, weight: .light)
         return label
     }()
     
