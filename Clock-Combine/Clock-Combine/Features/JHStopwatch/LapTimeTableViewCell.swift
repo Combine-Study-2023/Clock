@@ -58,3 +58,10 @@ extension LapTimeTableViewCell {
         }
     }
 }
+
+extension LapTimeTableViewCell {
+    func bindData(row: Int, time: String) {
+        self.lapLabel.text = "랩 \(row)"
+        self.timeLabel.text = time
+    }
+}
